@@ -1,0 +1,25 @@
+.footer {
+  height: 100px;
+  background-color: $black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.fab{
+  display:inline-block;
+  text-align: center;
+  padding: 8px;
+}
+
+.social{
+  font-size:30px;
+  color: $orange;
+  text-decoration: none;
+}
+
+.social:hover{
+  color:#FDD692;
+}

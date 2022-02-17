@@ -1,0 +1,92 @@
+.card {
+  margin: 12px;
+  background-size: cover;
+  height: 240px;
+  width: 350px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  h3 {
+    margin-top: 90px;
+  }
+    a {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+    }
+}
+
+.card-show-title {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.cards-movie {
+  margin-left: 35px;
+}
+
+.card-movie {
+  margin: 50px 46px 50px;
+  border-radius: 5px;
+  width: 421px;
+  height: 646px;
+}
+
+.card-poster {
+  object-position: center top;
+  object-fit: cover;
+  overflow: hidden;
+  height: 300px;
+}
+
+.card-description {
+  padding: 12px;
+  background-color: #F8F8F8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 355px;
+  h5 {
+    font-weight: bold;
+  }
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.card-review {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  position: relative;
+}
+
+.delete-movie {
+  position: absolute;
+  right: 1%;
+  top: -31%;
+}
+
+/*Media Queries*/
+
+@media(max-width: 992px) {
+  .card-movie {
+    margin: 48px 76px;
+  }
+
+  .card {
+    margin: 5px;
+  }
+}
+
+@media(max-width: 768px) {
+  .card-movie {
+    margin: 39px 9px
+  }
+
+  .card {
+    margin: 12px 0px 12px 97px
+  }
+}

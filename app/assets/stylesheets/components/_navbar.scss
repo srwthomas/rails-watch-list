@@ -1,12 +1,78 @@
-.navbar-lewagon {
+.navbar-watchlist {
   justify-content: space-between;
   background: white;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-watchlist {
+  background: #191919;
+}
+
+.navbar-watchlist .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-brand img {
   width: 40px;
+}
+
+.navbar-light .navbar-nav .active .nav-link{
+  color: white;
+  background-color: #f4a261;
+  border-radius: 5px;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+.navbar-link {
+  color: white;
+  background-color: #f4a261;
+  border-radius: 5px;
+  font-weight: lighter;
+  padding: 15px;
+  transition: background 0.3s ease;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
+
+/*Media Queries*/
+
+@media (min-width: 576px){
+  .navbar-expand-sm {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 768px) {
+  .navbar-link {
+    position: absolute;
+    right: 3%;
+    top: 17%;
+    border-radius: 75%;
+    padding: 8px 13px;
+    transition-duration: 0.9s;
+      &:hover{
+        border-radius: 15px;
+        padding: 8px 15px;
+        color: white;
+        &:before {
+          content: "Create a new list"
+        }
+      }
+  }
+
+  .navbar-btn{
+    display: none;
+  }
+
+  .navbar-btn-hover {
+      opacity: 0;
+    }
 }
