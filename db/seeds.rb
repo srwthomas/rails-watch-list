@@ -9,7 +9,7 @@ page_number = 0
 loop do
   page_number += 1
   url = "http://tmdb.lewagon.com/movie/top_rated?&page=#{page_number.to_s}"
-  movies = open(url).read
+  movies = URI.open(url).read
   movie = JSON.parse(movies)
   movie_results = movie['results']
   movie_poster = 'https://image.tmdb.org/t/p/w500'
