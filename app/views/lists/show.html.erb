@@ -55,6 +55,8 @@
           <%= f.submit "Add movie", class: "btn btn-primary" %>
         <% end %>
         </div>
+        <button class="button-back btn btn-primary">Back to lists</button>
+        <%= link_to "", lists_path(@list), method: :delete, id: "back-link", class: "hidden" %>
     </div>
   </div>
 </div>

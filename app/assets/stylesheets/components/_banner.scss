@@ -1,51 +1,48 @@
-.home-banner {
-  background-image: asset-url('movie_banner.jpeg');
+.banner {
   background-size: cover;
-  height: 100vh;
-  color: #eee;
+  background-position: center;
+  padding: 120px 0 150px 0;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  padding-top: 40vh;
-  margin-bottom: 75px;
-
-    h1{
-      font-size: 56px;
-      color: white;
-    }
+  padding-top: 15px;
 }
 
-.list-banner {
-  background-image: url('https://images.unsplash.com/photo-1534489573486-7d1fa4f436e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
-  background-size: cover;
-  height: 450px;
-  color: #eee;
-  text-align: center;
-  padding-top: 20vh;
-  margin-bottom: 55px;
+.banner-show {
+  background-position: 0% 25%;
 }
 
-.show-banner {
-  background-size: cover;
-  height: 600px;
-  width: 100%;
+.banner h1 {
+  margin: 0;
   color: white;
-  text-align: center;
-  padding-top: 30vh;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px black;
+  font-size: 64px;
 }
 
-.banner-arrow {
-  margin-top: 8px;
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+}
+
+.banner i {
+  margin: 0px 10px 0px 0px;
+  font-size: 72px;
 }
 
 
-/* Media Queries */
-
-@media(max-width: 768px) {
-  .home-banner {
-    background-position-x: -303px;
-    h1{
-      font-size: 36px;
-      color: white;
+@media (max-width: 575px) {
+  .banner {
+    padding: 90px 0 100px 0;
+    h1 {
+      font-size: 40px;
+    }
+    i {
+      font-size: 44px;
+    }
+    p {
+      font-size: 16px;
     }
   }
-
 }
