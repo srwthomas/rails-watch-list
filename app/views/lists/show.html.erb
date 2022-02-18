@@ -10,13 +10,13 @@
 
 <%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" },id: "delete-link", class: "hidden" %>
 
-<div class="container">
   <div class="card-show-title">
     <h1>Movies 🎬</h1>
   </div>
-  <div class="row cards-movie">
+<div class="container">
+  <div class="row ">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="col-6-sm">
+      <div class="col-sm-6">
         <div class="card-movie">
           <div class="card-poster">
               <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
@@ -24,7 +24,7 @@
           <div class="card-description">
             <div class="card-title">
               <h5><%= bookmark.movie.title %></h5>
-              <p> <%= bookmark.movie.rating %> ⭐️</p>
+              <p> <%= bookmark.rating %> ⭐️</p>
             </div>
             <div class="card-overview">
               <p> <%= bookmark.movie.overview %> </p>
@@ -48,11 +48,11 @@
          <h3>Add a new movie</h3>
         <%= simple_form_for [ @list, @bookmark ] do |f| %>
           <%= f.input :comment, placeholder: 'Add your comment' %>
-          <%= f.input :ratings, placeholder: 'Add your rating', collection: (1..5), id: "example"  %>
+          <%= f.input :rating, placeholder: 'Add your rating', collection: (1..5), id: "example"  %>
           <%= f.association :movie, input_html: { class: 'select2' } %>
           <%= f.submit "Add movie", class: "btn btn-primary" %>
         <% end %>
-        <%= link_to "Back to List", root_path, id: "back-link", class: "backlink" %>
+        <%= link_to "Back to List", lists_path, data: { confirm: "Are you sure?" }, id: "back-link", class: "backlink" %>
         </div>
     </div>
   </div>

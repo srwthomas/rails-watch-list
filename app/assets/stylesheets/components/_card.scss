@@ -1,3 +1,9 @@
+.container {
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .card {
   margin: 12px;
   background-size: cover;
@@ -10,11 +16,6 @@
   h3 {
     margin-top: 90px;
   }
-    // a {
-    //   text-decoration: none;
-    //   text-align: center;
-    //   color: white;
-    // }
 }
 
 .card-show-title {
@@ -24,6 +25,7 @@
 
 .cards-movie {
   margin: 0;
+  display: inline-block;
 }
 
 .card-movie {
@@ -71,7 +73,7 @@
 
 /*Media Queries*/
 
-@media(max-width: 1000px) {
+@media(max-width: 1440px) {
   .card-movie {
     margin: 48px 76px;
   }

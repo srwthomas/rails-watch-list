@@ -55,9 +55,9 @@
 
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (min-width: 570px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

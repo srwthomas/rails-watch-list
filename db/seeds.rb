@@ -15,7 +15,7 @@ loop do
   movie_poster = 'https://image.tmdb.org/t/p/w500'
 
   movie_results.each do | movie |
-    new_movie = Movie.create(title: movie['title'], overview: movie['overview'], poster_url: movie_poster + movie['poster_path'], rating: movie['vote_average'])
+    new_movie = Movie.create(title: movie['title'], overview: movie['overview'], poster_url: movie_poster + movie['poster_path'])
     puts "#{new_movie.title} has been created!"
   end
 
