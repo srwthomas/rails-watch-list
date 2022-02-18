@@ -5,7 +5,7 @@ export default class extends Controller {
   connect() {
     console.log("connnected")
     new Typed('#banner-typed-text', {
-      strings: ["Let's binge watch some movies!"],
+      strings: ["Add movies to your personal lists and rate them!"],
       typeSpeed: 100,
       loop: true
     });
