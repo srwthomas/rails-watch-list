@@ -3,4 +3,5 @@ class List < ApplicationRecord
   has_many :movies, through: :bookmarks
 
   validates :name, uniqueness: true, presence: true
+  validates :imageUrl, presence: true
 end
