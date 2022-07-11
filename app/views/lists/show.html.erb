@@ -1,59 +1,61 @@
-<% if @list.imageUrl.nil? %>
-    <div class="show-banner" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.12) 0, rgba(0,0,0,0.55) 74.4%), url('https://images.unsplash.com/photo-1534489573486-7d1fa4f436e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80')">
-        <h3><%= @list.name %></h3>
-    </div>
-<% else %>
-    <div class="show-banner" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.12) 0, rgba(0,0,0,0.55) 74.4%),url('<%= @list.imageUrl %>')">
-        <h2><%= @list.name %></h2>
-    </div>
-<% end %>
-
-<%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" },id: "delete-link", class: "hidden" %>
-
-  <div class="card-show-title">
-    <h1>Movies 🎬</h1>
-  </div>
 <div class="container">
-  <div class="row ">
-    <% @list.bookmarks.each do |bookmark| %>
-      <div class="col-sm-6">
-        <div class="card-movie">
-          <div class="card-poster">
-              <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
-          </div>
-          <div class="card-description">
-            <div class="card-title">
-              <h5><%= bookmark.movie.title %></h5>
-              <p> <%= bookmark.rating %> ⭐️</p>
-            </div>
-            <div class="card-overview">
-              <p> <%= bookmark.movie.overview %> </p>
-            </div>
-            <hr>
-            <p><strong>Review</strong></p>
-            <div class="card-review">
-              <p><%= bookmark.comment %></p>
-              <%= link_to "Delete Movie", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, id:"delete-movie", class: " btn-danger" %>
-            </div>
-          </div>
-        </div>
+  <% if @list.imageUrl.nil? %>
+      <div class="show-banner" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.12) 0, rgba(0,0,0,0.55) 74.4%), url('https://images.unsplash.com/photo-1534489573486-7d1fa4f436e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80')">
+          <h3><%= @list.name %></h3>
       </div>
-    <% end %>
-  </div>
+  <% else %>
+      <div class="show-banner" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.12) 0, rgba(0,0,0,0.55) 74.4%),url('<%= @list.imageUrl %>')">
+          <h2><%= @list.name %></h2>
+      </div>
+  <% end %>
 
-    <div class="row">
-      <div class="col-12">
-        <hr>
-        <div class="form col-12">
-         <h3>Add a new movie</h3>
-        <%= simple_form_for [ @list, @bookmark ] do |f| %>
-          <%= f.input :comment, placeholder: 'Add your comment' %>
-          <%= f.input :rating, placeholder: 'Add your rating', collection: (1..5), id: "example"  %>
-          <%= f.association :movie, input_html: { class: 'select2' } %>
-          <%= f.submit "Add movie", class: "btn btn-primary" %>
-        <% end %>
-        <%= link_to "Back to List", lists_path, data: { confirm: "Are you sure?" }, id: "back-link", class: "backlink" %>
+  <%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" },id: "delete-link", class: "hidden" %>
+
+    <div class="card-show-title">
+      <h1>Movies 🎬</h1>
+    </div>
+  <div class="container">
+    <div class="row ">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="col-sm-6">
+          <div class="card-movie">
+            <div class="card-poster">
+                <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
+            </div>
+            <div class="card-description">
+              <div class="card-title">
+                <h5><%= bookmark.movie.title %></h5>
+                <p> <%= bookmark.rating %> ⭐️</p>
+              </div>
+              <div class="card-overview">
+                <p> <%= bookmark.movie.overview %> </p>
+              </div>
+              <hr>
+              <p><strong>Review</strong></p>
+              <div class="card-review">
+                <p><%= bookmark.comment %></p>
+                <%= link_to "Delete Movie", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, id:"delete-movie", class: " btn-danger" %>
+              </div>
+            </div>
+          </div>
         </div>
+      <% end %>
+    </div>
+
+      <div class="row">
+        <div class="col-12">
+          <hr>
+          <div class="form col-12">
+          <h3>Add a new movie</h3>
+          <%= simple_form_for [ @list, @bookmark ] do |f| %>
+            <%= f.input :comment, placeholder: 'Add your comment' %>
+            <%= f.input :rating, placeholder: 'Add your rating', collection: (1..5), id: "example"  %>
+            <%= f.association :movie, input_html: { class: 'select2' } %>
+            <%= f.submit "Add movie", class: "btn btn-primary" %>
+          <% end %>
+          <%= link_to "Back to List", lists_path, data: { confirm: "Are you sure?" }, id: "back-link", class: "backlink" %>
+          </div>
+      </div>
     </div>
   </div>
 </div>
