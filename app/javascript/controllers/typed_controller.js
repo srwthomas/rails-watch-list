@@ -5,9 +5,9 @@ export default class extends Controller {
   connect() {
     // console.log("connnected")
     new Typed('#banner-typed-text', {
-      strings: ["Add movies to your personal lists and rate them!"],
-      typeSpeed: 100,
-      loop: true
+      strings: ["Select, add and rate movies in your own personal lists"],
+      typeSpeed: 110,
+      loop: 6
     });
   }
 }

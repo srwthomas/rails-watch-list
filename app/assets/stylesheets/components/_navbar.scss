@@ -1,47 +1,21 @@
-// .navbar {
-//   margin-bottom: 50px;
-// }
 .navbar-watchlist {
-  justify-content: space-between;
-  background: white;
+    justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
 }
-
-// .navbar-watchlist {
-//   background: #191919;
-// }
 
 .navbar-watchlist .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-brand img {
-  width: 40px;
-}
-
-.navbar-light .navbar-nav .active .nav-link{
-  color: white;
-  background-color: #f4a261;
-  border-radius: 5px;
-  font-weight: lighter;
-  padding: 10px;
-}
-
-.navbar-link {
-  color: white;
-  background-color: #f4a261;
-  border-radius: 5px;
-  font-weight: lighter;
-  padding: 15px;
-  transition: background 0.3s ease;
-  &:hover{
-    text-decoration: none;
-  }
+  width: 80px;
+  margin-top: 0.2em;
+  height: 80px;
 }
 
 .navbar-light .navbar-toggler {
-  border-color: transparent;
+  border-color: black;
 }
 
 /*Media Queries*/
