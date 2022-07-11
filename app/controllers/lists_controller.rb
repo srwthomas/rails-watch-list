@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  # before_action :set_user, only: [:show]
+  # before_action :list_params, only: [:show, :destroy]
 
   def index
     @lists = List.all
@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   end
 
   def new
-    @list = List.new(list_params)
+    @list = List.new
   end
 
   def create
@@ -28,6 +28,12 @@ class ListsController < ApplicationController
     @list.destroy
     redirect_to lists_path
   end
+
+  # def empty?
+  #   if @lists == 0
+  #     return 0
+  #   end
+  # end
 
   private
 

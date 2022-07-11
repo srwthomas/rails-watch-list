@@ -26,7 +26,7 @@ end
 puts "#{Movie.count}"
 
 
-List.create(id: 1, name: "Crime", imageUrl: "https://images.unsplash.com/photo-1605806616949-1e87b487fc2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
-List.create(id:2, name: "Action", imageUrl: "https://images.unsplash.com/photo-1622107450677-91557715f016?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGFjdGlvbiUyMGFybXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60")
+List.create(name: "Crime")
+List.create(name: "Action")
 
 puts "Lists created"
