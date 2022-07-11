@@ -83,5 +83,5 @@ production:
   <<: *default
   database: rails_watch_list_production
   username: rails_watch_list
-  url: "<%= ENV['DATABASE_URL'] %>"
+  url: postgres://luwpmzqbizpynq:c882d8dd49d1043104e010a99667dba5be8a25a9a1d2af763434bc1aef231631@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/dal341lnjf8kfr
   password: <%= ENV['RAILS_WATCH_LIST_DATABASE_PASSWORD'] %>
