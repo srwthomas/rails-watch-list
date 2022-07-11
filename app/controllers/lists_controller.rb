@@ -1,4 +1,6 @@
 class ListsController < ApplicationController
+  before_action :create, only: [:index, :show, :new, :create]
+
   def index
     @lists = List.all
   end
