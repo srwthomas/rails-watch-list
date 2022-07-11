@@ -1,24 +1,23 @@
-# README
+Simple Movie Watchlist Website 
+- Built using ruby on rails
+- Introductions and use of MVC (Model, View, Controller)
+- Using Pg database for movie storage
+- Using Simpleform to add/ edit Movie cards
+- Bookmark + list function 
+- Using typed.js to have a simple javascript animation (of a phrase typed ovr & over, again)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Spec
+- ruby '3.0.3'
+- bundler:2.3.11
+- gem 'pg', '~> 1.1'
+- gem "autoprefixer-rails", "10.2.5"
+- gem "font-awesome-sass", "~> 5.15"
+- gem "simple_form"
 
-Things you may want to cover:
+Setup
+- clone
+- bundle 
+- db:migrate
+- db:seed
+- rails s
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
