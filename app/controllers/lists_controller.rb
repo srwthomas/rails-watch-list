@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   end
 
   def new
-    @list = List.new
+    @list = List.new(list_params)
   end
 
   def create
