@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :create, only: [:index, :show, :new, :create]
+  # before_action :set_user, only: [:show]
 
   def index
     @lists = List.all
