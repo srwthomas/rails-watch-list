@@ -23,14 +23,13 @@ loop do
     break
   end
 end
-# puts "Cleaning up database..."
-# puts "Database cleaned"
 
 puts "Movies created"
 
 puts "#{Movie.count}"
 
-List.create(name: "Crime")
 List.create(name: "Action")
+List.create(name: "Crime")
+
 
 puts "Lists created"

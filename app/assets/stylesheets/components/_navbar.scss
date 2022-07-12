@@ -1,12 +1,4 @@
-.navbar-watchlist {
-    justify-content: space-between;
-  background-color: transparent;
-  transition: 0.5s background-color ease;
-}
-
-.navbar-watchlist .navbar-collapse {
-  flex-grow: 0;
-}
+// Nav Css
 
 .navbar-brand img {
   width: 80px;
@@ -19,37 +11,3 @@
 }
 
 /*Media Queries*/
-
-@media (min-width: 576px){
-  .navbar-expand-sm {
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  }
-}
-
-@media(max-width: 768px) {
-  .navbar-link {
-    position: absolute;
-    right: 3%;
-    top: 17%;
-    border-radius: 75%;
-    padding: 8px 13px;
-    transition-duration: 0.9s;
-      &:hover{
-        border-radius: 15px;
-        padding: 8px 15px;
-        color: white;
-        &:before {
-          content: "Create a new list"
-        }
-      }
-  }
-
-  .navbar-btn{
-    display: none;
-  }
-
-  .navbar-btn-hover {
-      opacity: 0;
-    }
-}

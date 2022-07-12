@@ -1,6 +1,5 @@
 <div class="home-banner">
   <h1 data-controller="typed"><span id="banner-typed-text"></span></h1>
-    <%# <h1 class="banner-arrow">⌵</h1> %>
 </div>
 
 <div class="container">
@@ -13,10 +12,10 @@
           </div>
         <% else %>
           <div class="card" style= "background-image: linear-gradient(to bottom, rgba(255,255,255,0.12) 0, rgba(0,0,0,0.55) 74.4%), url('<%= list.imageUrl %>')">
-          <h3><%= link_to list.name, list_path(list)%></h3>
-        </div>
+            <h3><%= link_to list.name, list_path(list)%></h3>
+          </div>
         <% end %>
-        </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+  </div>
 </div>

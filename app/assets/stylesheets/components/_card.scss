@@ -1,3 +1,5 @@
+// card section
+
 .container {
   text-align: center;
   justify-content: center;
@@ -17,6 +19,12 @@
     margin-top: 90px;
   }
 }
+
+.card:hover {
+  opacity: 0.6;
+}
+
+// card contents
 
 .card-show-title {
   margin-top: 25px;

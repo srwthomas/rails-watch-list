@@ -1,3 +1,4 @@
+// banner css
 .show-banner {
   background-size: cover;
   background-position: center;
@@ -5,20 +6,6 @@
   font-family: 'Roboto', sans-serif;
   text-align: center;
   padding-top: 15px;
-}
-
-.show-banner {
-  background-position: 0% 25%;
-}
-
-#delete-link {
-  margin-top: 5em;
-}
-
-#banner-typed-text {
-  color: grey;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
 }
 
 .show-banner h2 {
@@ -30,6 +17,18 @@
   font-size: 64px;
 }
 
+.show-banner {
+  background-position: 0% 25%;
+}
+
+// typed.js styling
+#banner-typed-text {
+  color: grey;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+// list description text
 .show-banner p {
   font-size: 20px;
   color: white;
@@ -48,6 +47,13 @@
   }
 }
 
+// delete list btn
+
+#delete-link {
+  margin-top: 5em;
+}
+
+// media queries
 @media (max-width: 575px) {
   .banner {
     padding: 90px 0 100px 0;

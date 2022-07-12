@@ -1,19 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-watchlist">
+<div class="navbar navbar-watchlist">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://cdn-icons-png.flaticon.com/512/49/49238.png", class: "logo" %>
+  <%= image_tag "https://cdn-icons-png.flaticon.com/512/49/49238.png", class: "logo" %>
     <div class="navbar-btn">
       <%= link_to "Create a new list", new_list_path, class: "btn btn-primary navbar-link" %>
     </div>
-    <div class="btn">
+     <div class="btn">
       <%= link_to "Back to lists", lists_path, class: "btn btn-warning navbar-link" %>
     </div>
     <% end %>
-
-  <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <div class="btn">
-      <%= link_to new_list_path, class: "navbar-link" do %>
-        <i class="fab fa-plus"></i>
-      <% end %>
-    </div>
-  </div>
 </div>

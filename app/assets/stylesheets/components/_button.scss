@@ -1,7 +1,4 @@
-.button-delete {
-  float: right;
-  margin: 24px;
-}
+//  extra btn styling
 
 .btn {
   border-radius: 5px;
@@ -9,6 +6,10 @@
 }
 
 .btn-primary:hover{
+  color: white;
+}
+
+.btn-warning:hover{
   color: white;
 }
 
