@@ -11,6 +11,10 @@
   background-position: 0% 25%;
 }
 
+#delete-link {
+  margin-top: 5em;
+}
+
 #banner-typed-text {
   color: grey;
   font-family: 'Roboto', sans-serif;
@@ -37,6 +41,12 @@
   font-size: 72px;
 }
 
+.formNew {
+  margin-top: 2em;
+  h3 {
+    margin-bottom: 2em;
+  }
+}
 
 @media (max-width: 575px) {
   .banner {

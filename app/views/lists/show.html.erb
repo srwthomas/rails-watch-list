@@ -9,8 +9,6 @@
       </div>
   <% end %>
 
-  <%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" },id: "delete-link", class: "hidden" %>
-
     <div class="card-show-title">
       <h1>Movies 🎬</h1>
     </div>
@@ -34,19 +32,18 @@
               <p><strong>Review</strong></p>
               <div class="card-review">
                 <p><%= bookmark.comment %></p>
-                <%= link_to "Delete Movie", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, id:"delete-movie", class: " btn-danger" %>
+                <%= link_to "Delete Movie", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, id:"delete-movie", class: "btn btn-danger" %>
               </div>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-
-      <div class="row">
-        <div class="col-12">
-          <hr>
-          <div class="form col-12">
-          <h3>Add a new movie</h3>
+  <div class="row">
+    <hr>
+      <div class="formNew col-12">
+      <div  class="form col-12">
+        <h3>Add new movies</h3>
           <%= simple_form_for [ @list, @bookmark ] do |f| %>
             <%= f.input :comment, placeholder: 'Add your comment' %>
             <%= f.input :rating, placeholder: 'Add your rating', collection: (1..5), id: "example"  %>
@@ -56,5 +53,6 @@
         </div>
       </div>
     </div>
+    <%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" },id: "delete-link", class: "btn btn-danger" %>
   </div>
 </div>

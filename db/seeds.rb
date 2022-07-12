@@ -7,8 +7,8 @@ require 'open-uri'
 page_number = 0
 
 loop do
-  page_number += 1
-  url = "http://tmdb.lewagon.com/movie/top_rated?&page=#{page_number.to_s}"
+  new_num = page_number += 1
+  url = "http://tmdb.lewagon.com/movie/top_rated?&page=#{new_num.to_s}"
   movies = URI.open(url).read
   movie = JSON.parse(movies)
   movie_results = movie['results']
@@ -23,8 +23,12 @@ loop do
     break
   end
 end
-puts "#{Movie.count}"
+# puts "Cleaning up database..."
+# puts "Database cleaned"
 
+puts "Movies created"
+
+puts "#{Movie.count}"
 
 List.create(name: "Crime")
 List.create(name: "Action")
